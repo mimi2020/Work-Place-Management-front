@@ -13,7 +13,7 @@ return (
     <div className="App">
     <header className="App-header">
       <p>Scan My QR Code</p>
-      <QRCodeCanvas value="https://www.showwcase.com/shivam-katare"  size={230}/>,  {/* here the "value" is the prop. You can give any link here. */}
+      <QRCodeCanvas value="https://www.addourfavorite/urlTOscan"  size={230}/>,  {/* here the "value" is the prop. You can give any link here. */}
     </header>
   </div>
     );
