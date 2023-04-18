@@ -24,7 +24,8 @@ const ExSwitch = lazy(() => import("../views/FormElements/ExSwitch"));
 const FormLayouts = lazy(() => import("../views/FormLayouts/FormLayouts"));
 const Users = lazy(()=>import("../views/dashboards/Users"))
 const ChartJS = lazy(()=>import("../views/dashboards/ChartJS.js"))
-
+const App2 = lazy(()=>import("../views/dashboards/App2.js"))
+const Scan = lazy(()=>import("../views/dashboards/Scan.js"))
 /*****Routes******/
 
 const ThemeRoutes = [
@@ -44,6 +45,8 @@ const ThemeRoutes = [
       { path: "/form-elements/switch", element: <ExSwitch /> },
       {path:"/Users",element:<Users/>},
       {path:"/ChartJS",element:<ChartJS/>},
+      {path:"/App2",element:<App2/>},
+      {path:"/Scan",element:<Scan/>},
     ],
   },
 ];

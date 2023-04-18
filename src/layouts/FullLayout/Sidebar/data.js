@@ -66,6 +66,16 @@ const Menuitems = [
     icon: SwitchLeftOutlined,
     href: "/chartJS/",
   },
+  {
+    title: "QR",
+    icon: SwitchLeftOutlined,
+    href: "/App2/",
+  },
+  {
+    title: "Scan",
+    icon: SwitchLeftOutlined,
+    href: "/Scan/",
+  },
 ];
 
 export default Menuitems;
