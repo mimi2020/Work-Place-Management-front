@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginApi } from "../../services/LoginService";
+import LoginService from "../../services/LoginService";
 import {
   Card,
   CardContent,
@@ -29,9 +29,11 @@ function Login() {
     localStorage.removeItem("idUser");
         setUser({ ...user, [e.target.name]: e.target.value });
   };
+  const Auth = new LoginService()
   const handelLogin = async(e) => {
     e.preventDefault();
-    const result =  loginApi(user).then((res) => {
+    const result = Auth.login(user).then((res) => {
+    // const result =  loginApi(user).then((res) => {
       const idStorage = res.data.user._id;
       localStorage.setItem("idUser",idStorage);
        if(res.data.user.role=="admin"){

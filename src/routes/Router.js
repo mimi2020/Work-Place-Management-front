@@ -23,17 +23,20 @@ const ExSwitch = lazy(() => import("../views/FormElements/ExSwitch"));
 // form layouts
 const FormLayouts = lazy(() => import("../views/FormLayouts/FormLayouts"));
 const Users = lazy(()=>import("../views/dashboards/Users"))
+const Departements = lazy(()=>import("../views/dashboards/Departements.js"))
 const ChartJS = lazy(()=>import("../views/dashboards/ChartJS.js"))
 const App2 = lazy(()=>import("../views/dashboards/App2.js"))
 const Scan = lazy(()=>import("../views/dashboards/Scan.js"))
+const Login = lazy(()=>import("../views/dashboards/Login.js"))
 /*****Routes******/
 
 const ThemeRoutes = [
   {
     path: "/",
-    element: <FullLayout />,
+    // element: <FullLayout />,
     children: [
-      { path: "/", element: <Navigate to="dashboards/dashboard1" /> },
+      {path:"/",element:<Login/>},
+      // { path: "/", element: <Navigate to="dashboards/dashboard1" /> },
       { path: "dashboards/dashboard1", exact: true, element: <Dashboard1 /> },
       { path: "tables/basic-table", element: <BasicTable /> },
       { path: "/form-layouts/form-layouts", element: <FormLayouts /> },
@@ -44,11 +47,25 @@ const ThemeRoutes = [
       { path: "/form-elements/slider", element: <ExSlider /> },
       { path: "/form-elements/switch", element: <ExSwitch /> },
       {path:"/Users",element:<Users/>},
+      {path:"/Departements", element:<Departements/>},
       {path:"/ChartJS",element:<ChartJS/>},
       {path:"/App2",element:<App2/>},
       {path:"/Scan",element:<Scan/>},
+  
     ],
+  
+
+
+    
   },
+  {  path: "/Login",
+   
+  children: [
+    {path:"/Login",element:<Login/>},
+    // { path: "/", element: <Navigate to="dashboards/dashboard1" /> },
+  
+
+  ],}
 ];
 
 export default ThemeRoutes;
